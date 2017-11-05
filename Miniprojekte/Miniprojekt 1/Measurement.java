@@ -11,6 +11,7 @@ public class Measurement {
     }
 
     public void addValue(int value) {
+
         int[] newdata = new int[this.data.length+1];
         for (int i = 0; i < this.data.length; i++) {
             newdata[i] = data[i];
@@ -20,6 +21,7 @@ public class Measurement {
     }
 
     public void addValues(int[] values) {
+
         int[] newdata = new int[this.data.length+ values.length];
         for (int i = 0; i < this.data.length; i++) {
             newdata[i] = data[i];
@@ -31,6 +33,7 @@ public class Measurement {
     }
 
     public int getMinimumValue() {
+
         int min = Integer.MAX_VALUE;
         for (int value : this.data) {
             if (value < min) min = value;

@@ -9,6 +9,7 @@ public class Matrix {
     }
 
     public void scalarMultiplication(int c) {
+
         for (int i = 0; i < this.values.length; i++) {
             for (int j = 0; j < this.values[i].length; j++) {
                 this.values[i][j] *= c;
@@ -17,6 +18,7 @@ public class Matrix {
     }
 
     public void add(Matrix m) {
+
         for (int i = 0; i < this.values.length; i++) {
             for (int j = 0; j < this.values[i].length; j++) {
                 this.values[i][j] += m.values[i][j];
@@ -25,6 +27,7 @@ public class Matrix {
     }
 
     public int[] getColumnVector(int col) {
+
         int[] columnvector = new int[this.values.length];
         for (int i = 0; i < this.values.length; i++) {
             columnvector[i] = this.values[i][col];
@@ -33,6 +36,7 @@ public class Matrix {
     }
 
     public boolean isEqualTo(Matrix m) {
+
         if (m.values.length != this.values.length || m.values[0].length != this.values[0].length) return false;
         for (int i = 0; i < this.values.length; i++) {
             for (int j = 0; j < this.values[i].length; j++) {
@@ -43,6 +47,7 @@ public class Matrix {
     }
 
     public void transpose() {
+
         int[][] transposed = new int[this.values[0].length][this.values.length];
         for (int i = 0; i < transposed.length; i++) {
             transposed[i] = this.getColumnVector(i);
